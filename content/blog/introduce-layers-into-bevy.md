@@ -70,7 +70,7 @@ Direct queries into another feature's private components are not allowed. If it 
 
 One important aspect is the scheduling of systems. I thought my plugins were independent, but they were not. Even after splitting them into separate crates, they were still tightly coupled through states - which were not available in isolated examples or sandbox apps. So I introduced injectable schedules for each plugin. It looks like this:
 
-```
+```rust
 pub struct CharacterPlugin {
     spawn_schedule: Interned<dyn ScheduleLabel>,
     despawn_schedule: Interned<dyn ScheduleLabel>,
