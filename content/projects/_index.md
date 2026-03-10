@@ -21,4 +21,11 @@ url = "https://github.com/morgenthum/bevy_xray"
 crates = "https://crates.io/crates/bevy_xray"
 language = "Rust"
 tags = ["bevy", "tooling", "static-analysis"]
+
+[[extra.projects]]
+name = "lambda-heights"
+description = "A fast-paced arcade game written in Haskell. Play as a small lambda letter, jumping across layers to keep up with the rising screen. Features game replays with adjustable playback speed."
+url = "https://github.com/morgenthum/lambda-heights"
+language = "Haskell"
+tags = ["gamedev", "sdl2", "arcade"]
 +++

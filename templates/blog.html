@@ -10,7 +10,7 @@
   </div>
 
   {% for page in section.pages %}
-  <a href="{{ page.permalink }}" class="post-card">
+  <a href="{{ page.path }}" class="post-card">
     <time class="post-card__date" datetime="{{ page.date }}">
       {{ page.date | date(format="%d.%m.%Y") }}
     </time>

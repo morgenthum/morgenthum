@@ -11,7 +11,7 @@
 
   <div class="tag-cloud">
     {% for term in terms %}
-    <a href="{{ term.permalink }}" class="tag">{{ term.name }} ({{ term.pages | length }})</a>
+    <a href="{{ term.path }}" class="tag">{{ term.name }} ({{ term.pages | length }})</a>
     {% endfor %}
   </div>
 </div>

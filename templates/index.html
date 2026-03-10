@@ -15,7 +15,7 @@
   <section>
     <h2 class="section-title">Latest Posts</h2>
     {% for page in blog.pages | slice(end=5) %}
-    <a href="{{ page.permalink }}" class="post-card">
+    <a href="{{ page.path }}" class="post-card">
       <time class="post-card__date" datetime="{{ page.date }}">
         {{ page.date | date(format="%d.%m.%Y") }}
       </time>
