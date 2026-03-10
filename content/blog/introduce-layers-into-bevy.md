@@ -12,9 +12,9 @@ Wild Spikes is a survival and stealth game with quests, day/night cycles, weathe
 
 Bevy makes it easy to add systems and plugins. I started the project as one crate, with a few plugins that all lived together, operating on one State, SubState, or ComputedState. It was great for getting something up and running quickly.
 
-As the plugins grew, it became harder to keep track of dependencies. The moment I introduced the HUB — a separate screen for opening the inventory and crafting menu — the whole thing became messy. I couldn't test it because everything was wired together, either through direct dependencies or through shared states. Sometimes my character controller blew up, sometimes the HUB exploded, and every time I had to fix something while keeping the whole picture in mind.
+As the plugins grew, it became harder to keep track of dependencies. The moment I introduced the HUB - a separate screen for opening the inventory and crafting menu - the whole thing became messy. I couldn't test it because everything was wired together, either through direct dependencies or through shared states. Sometimes my character controller blew up, sometimes the HUB exploded, and every time I had to fix something while keeping the whole picture in mind.
 
-I didn't just want Bevy plugins — I wanted real self-contained modules. So I split the codebase into multiple crates. Some were more game-specific, others more generic. After a few iterations, I introduced a separate "engine" layer to abstract some of the game-specific details and keep things inside the game cleaner and more focused. After further iterations, I arrived at the architecture I'm currently using. I'm sure it's not perfect, but it has been working well for me so far.
+I didn't just want Bevy plugins - I wanted real self-contained modules. So I split the codebase into multiple crates. Some were more game-specific, others more generic. After a few iterations, I introduced a separate "engine" layer to abstract some of the game-specific details and keep things inside the game cleaner and more focused. After further iterations, I arrived at the architecture I'm currently using. I'm sure it's not perfect, but it has been working well for me so far.
 
 ## The layers
 
