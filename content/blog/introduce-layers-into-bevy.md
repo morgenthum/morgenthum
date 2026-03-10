@@ -120,3 +120,7 @@ That way, the functionality of my self-contained crates is truly self-contained.
 * Clear boundaries make it easier to reason about changes. I can refactor the internals of a feature without worrying about breaking other features, as long as the public API stays the same.
 * The engine modules are not tied to Wild Spikes. I can reuse them in other projects or share them as standalone crates.
 * Sandboxes let me prototype new ideas quickly. I can try out a new mechanic or visual effect without touching the real game code - and throw it away if it doesn't work out.
+
+## By the numbers
+
+As of today, Wild Spikes has 14 states, 97 plugins, and 71 system sets. I track these with [bevy_xray](https://github.com/morgenthum/bevy_xray), a small tool I built to inspect the runtime structure of a Bevy app.
