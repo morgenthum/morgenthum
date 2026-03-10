@@ -108,6 +108,7 @@ app.add_plugins(
         PostUpdate,
     )
 );
+```
 
 That way, the functionality of my self-contained crates is truly self-contained. I can test them in isolation without having to worry about the rest of the game.
 
