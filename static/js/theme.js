@@ -9,6 +9,7 @@
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f7f3f0' : '#141a1e';
     updateIcon(theme);
   }
 

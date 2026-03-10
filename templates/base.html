@@ -26,6 +26,9 @@
   <link rel="preload" href="/fonts/SourceSerif4-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/JetBrainsMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- Safari address bar color -->
+  <meta name="theme-color" content="#141a1e">
+
   <!-- Theme initialization (prevent flash) -->
   <script>
     (function() {
@@ -34,6 +37,7 @@
         theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       }
       document.documentElement.setAttribute('data-theme', theme);
+      document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f7f3f0' : '#141a1e';
     })();
   </script>
 
@@ -67,6 +71,7 @@
       </a>
       <ul class="nav__links">
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/">Projects</a></li>
         <li><a href="/tags/">Tags</a></li>
         <li><a href="{{ config.extra.github }}" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
