@@ -1,6 +1,6 @@
 +++
 title = "How to introduce layers into Bevy games"
-date = 2026-03-11
+date = 2026-03-10
 description = "A look at the layered architecture behind Wild Spikes, my survival game built with Rust and Bevy. Strict dependency rules, clear boundaries, and why it matters."
 [taxonomies]
 tags = ["rust", "bevy", "wild-spikes", "architecture"]
