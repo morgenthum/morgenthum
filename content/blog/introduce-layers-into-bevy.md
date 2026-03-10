@@ -84,7 +84,7 @@ The `CharacterPlugin` combines all character-related systems, such as camera fol
 
 The initialization in the game assembly looks like this:
 
-```
+```rust
 app.add_plugins((
     CharacterPlugin::new(
         OnEnter(AppState::InGame),
@@ -100,7 +100,7 @@ app.add_plugins((
 
 But in examples or sandbox apps it can be initialized like this:
 
-```
+```rust
 app.add_plugins(CharacterPlugin::new(
         OnEnter(SandboxState::Running),
         OnExit(SandboxState::Running),
