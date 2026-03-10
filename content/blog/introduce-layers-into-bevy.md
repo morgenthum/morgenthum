@@ -85,30 +85,29 @@ The `CharacterPlugin` combines all character-related systems, such as camera fol
 The initialization in the game assembly looks like this:
 
 ```rust
-app.add_plugins((
+app.add_plugins(
     CharacterPlugin::new(
         OnEnter(AppState::InGame),
         OnExit(AppState::InGame),
         Update,
         Update,
         PostUpdate,
-    ),
-    NpcPlugin,
-    OwlPlugin::new(OnEnter(AppState::InGame)),
-));
+    )
+);
 ```
 
 But in examples or sandbox apps it can be initialized like this:
 
 ```rust
-app.add_plugins(CharacterPlugin::new(
+app.add_plugins(
+    CharacterPlugin::new(
         OnEnter(SandboxState::Running),
         OnExit(SandboxState::Running),
         Update,
         Update,
         PostUpdate,
-    ))
-```
+    )
+);
 
 That way, the functionality of my self-contained crates is truly self-contained. I can test them in isolation without having to worry about the rest of the game.
 
