@@ -20,6 +20,9 @@
   --accent-hover: hsl(160deg 70% 60%);
   --accent-subtle: hsl(160deg 70% 50% / 0.12);
   --accent-2: hsl(35deg 90% 58%);
+  --gradient: linear-gradient(135deg, hsl(160deg 70% 50%), hsl(200deg 80% 60%), hsl(260deg 60% 65%));
+  --gradient-warm: linear-gradient(135deg, hsl(160deg 70% 50%), hsl(35deg 90% 58%));
+  --hero-glow: hsl(160deg 70% 50% / 0.08);
 
   --shadow-sm: 0 1px 3px hsl(0deg 0% 0% / 0.3);
   --shadow-md: 0 4px 12px hsl(0deg 0% 0% / 0.3);
@@ -34,29 +37,32 @@
 
 // Light theme
 [data-theme="light"] {
-  --bg: hsl(220deg 20% 97%);
+  --bg: hsl(30deg 20% 97%);
   --bg-surface: hsl(0deg 0% 100%);
-  --bg-surface-hover: hsl(220deg 20% 95%);
+  --bg-surface-hover: hsl(30deg 15% 94%);
   --bg-code: hsl(220deg 15% 95%);
-  --border: hsl(220deg 15% 88%);
-  --border-light: hsl(220deg 15% 92%);
+  --border: hsl(30deg 12% 86%);
+  --border-light: hsl(30deg 12% 91%);
 
-  --text: hsl(220deg 20% 14%);
-  --text-secondary: hsl(220deg 10% 42%);
-  --text-tertiary: hsl(220deg 10% 58%);
+  --text: hsl(20deg 20% 14%);
+  --text-secondary: hsl(20deg 8% 40%);
+  --text-tertiary: hsl(20deg 6% 56%);
 
-  --accent: hsl(160deg 80% 38%);
-  --accent-hover: hsl(160deg 80% 32%);
-  --accent-subtle: hsl(160deg 80% 38% / 0.08);
-  --accent-2: hsl(35deg 90% 48%);
+  --accent: hsl(25deg 90% 52%);
+  --accent-hover: hsl(25deg 90% 44%);
+  --accent-subtle: hsl(25deg 90% 52% / 0.08);
+  --accent-2: hsl(350deg 75% 55%);
+  --gradient: linear-gradient(135deg, hsl(25deg 90% 52%), hsl(350deg 75% 55%), hsl(330deg 65% 50%));
+  --gradient-warm: linear-gradient(135deg, hsl(25deg 90% 52%), hsl(350deg 75% 55%));
+  --hero-glow: hsl(25deg 90% 52% / 0.07);
 
   --shadow-sm: 0 1px 3px hsl(0deg 0% 0% / 0.08);
   --shadow-md: 0 4px 12px hsl(0deg 0% 0% / 0.1);
 
-  --callout-info-bg: hsl(210deg 60% 50% / 0.06);
-  --callout-info-border: hsl(210deg 60% 50% / 0.3);
-  --callout-warn-bg: hsl(40deg 80% 50% / 0.06);
-  --callout-warn-border: hsl(40deg 80% 50% / 0.3);
-  --callout-tip-bg: hsl(160deg 60% 50% / 0.06);
-  --callout-tip-border: hsl(160deg 60% 50% / 0.3);
+  --callout-info-bg: hsl(210deg 55% 50% / 0.07);
+  --callout-info-border: hsl(210deg 55% 50% / 0.3);
+  --callout-warn-bg: hsl(350deg 75% 55% / 0.07);
+  --callout-warn-border: hsl(350deg 75% 55% / 0.3);
+  --callout-tip-bg: hsl(25deg 85% 52% / 0.07);
+  --callout-tip-border: hsl(25deg 85% 52% / 0.35);
 }

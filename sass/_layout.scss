@@ -47,10 +47,21 @@ main {
   z-index: 100;
   height: var(--nav-height);
   background: var(--bg);
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: none;
   backdrop-filter: blur(12px);
   font-family: var(--font-heading);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient);
+    opacity: 0.3;
+  }
 
   &__inner {
     max-width: var(--wide-width);

@@ -90,15 +90,15 @@ pre:hover .code-copy {
 .z-builtin { color: hsl(350deg 65% 70%); }
 .z-meta { color: hsl(220deg 10% 60%); }
 
-// Light theme code colors stay the same (dark code blocks in both themes)
+// Light theme: dark code blocks with warmer tones
 [data-theme="light"] {
   pre {
-    background: hsl(220deg 18% 13%);
-    border-color: hsl(220deg 15% 20%);
-    color: hsl(220deg 10% 88%);
+    background: hsl(15deg 15% 12%);
+    border-color: hsl(15deg 10% 18%);
+    color: hsl(30deg 12% 85%);
 
     code {
-      color: hsl(220deg 10% 88%);
+      color: hsl(30deg 12% 85%);
     }
   }
 
@@ -109,14 +109,30 @@ pre:hover .code-copy {
   }
 
   pre[data-lang]::before {
-    background: hsl(220deg 18% 18%);
-    border-color: hsl(220deg 15% 22%);
-    color: hsl(220deg 10% 50%);
+    background: hsl(15deg 12% 16%);
+    border-color: hsl(15deg 10% 20%);
+    color: hsl(30deg 8% 48%);
   }
 
   .code-copy {
-    background: hsl(220deg 18% 18%);
-    border-color: hsl(220deg 15% 25%);
-    color: hsl(220deg 10% 50%);
+    background: hsl(15deg 12% 16%);
+    border-color: hsl(15deg 10% 22%);
+    color: hsl(30deg 8% 48%);
   }
+
+  // Warm-shifted syntax colors
+  .z-comment { color: hsl(30deg 8% 45%); }
+  .z-keyword { color: hsl(280deg 60% 72%); }
+  .z-string { color: hsl(35deg 80% 65%); }
+  .z-number { color: hsl(25deg 85% 65%); }
+  .z-function { color: hsl(3deg 55% 70%); }
+  .z-type { color: hsl(45deg 75% 68%); }
+  .z-variable { color: hsl(30deg 12% 85%); }
+  .z-operator { color: hsl(190deg 50% 65%); }
+  .z-punctuation { color: hsl(30deg 8% 58%); }
+  .z-attribute { color: hsl(160deg 50% 60%); }
+  .z-tag { color: hsl(350deg 60% 70%); }
+  .z-constant { color: hsl(25deg 85% 65%); }
+  .z-builtin { color: hsl(350deg 60% 70%); }
+  .z-meta { color: hsl(30deg 8% 58%); }
 }

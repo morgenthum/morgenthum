@@ -282,6 +282,19 @@
 .hero {
   padding: var(--sp-8) 0 var(--sp-7);
   font-family: var(--font-heading);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 140%;
+    background: radial-gradient(ellipse, var(--hero-glow) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
 
   &__greeting {
     font-size: var(--text-lg);
@@ -295,6 +308,10 @@
     font-weight: 800;
     margin-bottom: var(--sp-4);
     letter-spacing: -0.03em;
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__description {
@@ -316,6 +333,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: var(--border-light);
+    background: var(--gradient);
+    opacity: 0.4;
   }
 }
