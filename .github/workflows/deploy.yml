@@ -27,7 +27,7 @@ jobs:
           sudo mv zola /usr/local/bin/
 
       - name: Build
-        run: zola build --config zola.toml
+        run: zola build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
