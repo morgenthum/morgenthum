@@ -36,7 +36,7 @@ Engine Modules      engine/*        Generic tech, no game knowledge
 
 **Game Core** defines the shared contracts. Data structures, traits, events, and marker components that game features need to communicate at the lowest level. It contains no gameplay logic itself - just the vocabulary that features use to talk to each other.
 
-**Game Features** is where the actual game lives. Each feature - character, NPCs, narrative, survival, UI - is its own crate with its own plugin. Features depend on Game Core and Engine Modules, and can depend on each other when explicitly needed.
+**Game Features** is where the actual game lives. Each feature is its own crate with its own plugin, covering a self-contained part of the game. The character crate handles the player controller, stealth, and survival mechanics. The NPC crate owns concrete creature logic like the owl's behavior. Narrative contains the dialogue and quest systems. Gameplay covers crafting, inventory, and object spawning. Features depend on Game Core and Engine Modules, and can depend on each other when explicitly needed.
 
 **App Bootstrap** handles the Bevy boilerplate: default plugins, window setup, logging, settings I/O. Both the real game and sandboxes use this.
 
