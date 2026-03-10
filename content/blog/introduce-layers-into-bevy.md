@@ -51,7 +51,7 @@ Engine Modules      engine/*        Generic tech, no game knowledge
 The core principle is simple: dependencies only point downward. But there are a few extra rules that matter:
 
 - Engine Modules must never reference concrete game types. No `Owl`, no `QuestLog`. Only generic components and traits.
-- Game Features must not use closed enums that grow with every new content type. Instead, we use composition via components. Each concrete type builds its own set of behavior components.
+- Game Features must not use closed enums that grow with every new content type. Instead, I use composition via components. Each concrete type builds its own set of behavior components.
 - Game Core defines generic contracts. Concrete implementations belong in the features.
 - Product Apps contain no gameplay logic. They only wire Bootstrap and Assembly.
 
@@ -121,6 +121,10 @@ That way, the functionality of my self-contained crates is truly self-contained.
 * The engine modules are not tied to Wild Spikes. I can reuse them in other projects or share them as standalone crates.
 * Sandboxes let me prototype new ideas quickly. I can try out a new mechanic or visual effect without touching the real game code - and throw it away if it doesn't work out.
 
+## A note on perspective
+
+I'm not a professional game developer. My background is in software architecture, and I lean on the usual principles - SOLID, design patterns, clear boundaries - to keep things manageable. I'm not one of the experienced engine developers you meet on the Bevy Discord who live deep in ECS internals and rendering pipelines. This architecture is shaped by what I know, and it works for me.
+
 ## By the numbers
 
-As of today, Wild Spikes has 14 states, 97 plugins, and 71 system sets. I track these with [bevy_xray](https://github.com/morgenthum/bevy_xray), a small tool I built to inspect the runtime structure of a Bevy app.
+As of today, Wild Spikes has 14 states, 97 plugins, and 71 system sets. I track these with [bevy_xray](https://github.com/morgenthum/bevy_xray), a small tool I built to inspect the structure of a Bevy app.
