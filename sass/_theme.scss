@@ -1,0 +1,62 @@
+// ============================================
+// Dark / Light Theme System
+// ============================================
+
+// Dark theme (default)
+:root,
+[data-theme="dark"] {
+  --bg: hsl(220deg 20% 7%);
+  --bg-surface: hsl(220deg 18% 11%);
+  --bg-surface-hover: hsl(220deg 18% 15%);
+  --bg-code: hsl(220deg 18% 13%);
+  --border: hsl(220deg 15% 18%);
+  --border-light: hsl(220deg 15% 14%);
+
+  --text: hsl(220deg 10% 88%);
+  --text-secondary: hsl(220deg 10% 60%);
+  --text-tertiary: hsl(220deg 10% 42%);
+
+  --accent: hsl(160deg 70% 50%);
+  --accent-hover: hsl(160deg 70% 60%);
+  --accent-subtle: hsl(160deg 70% 50% / 0.12);
+  --accent-2: hsl(35deg 90% 58%);
+
+  --shadow-sm: 0 1px 3px hsl(0deg 0% 0% / 0.3);
+  --shadow-md: 0 4px 12px hsl(0deg 0% 0% / 0.3);
+
+  --callout-info-bg: hsl(210deg 60% 50% / 0.1);
+  --callout-info-border: hsl(210deg 60% 50% / 0.4);
+  --callout-warn-bg: hsl(40deg 80% 50% / 0.1);
+  --callout-warn-border: hsl(40deg 80% 50% / 0.4);
+  --callout-tip-bg: hsl(160deg 60% 50% / 0.1);
+  --callout-tip-border: hsl(160deg 60% 50% / 0.4);
+}
+
+// Light theme
+[data-theme="light"] {
+  --bg: hsl(220deg 20% 97%);
+  --bg-surface: hsl(0deg 0% 100%);
+  --bg-surface-hover: hsl(220deg 20% 95%);
+  --bg-code: hsl(220deg 15% 95%);
+  --border: hsl(220deg 15% 88%);
+  --border-light: hsl(220deg 15% 92%);
+
+  --text: hsl(220deg 20% 14%);
+  --text-secondary: hsl(220deg 10% 42%);
+  --text-tertiary: hsl(220deg 10% 58%);
+
+  --accent: hsl(160deg 80% 38%);
+  --accent-hover: hsl(160deg 80% 32%);
+  --accent-subtle: hsl(160deg 80% 38% / 0.08);
+  --accent-2: hsl(35deg 90% 48%);
+
+  --shadow-sm: 0 1px 3px hsl(0deg 0% 0% / 0.08);
+  --shadow-md: 0 4px 12px hsl(0deg 0% 0% / 0.1);
+
+  --callout-info-bg: hsl(210deg 60% 50% / 0.06);
+  --callout-info-border: hsl(210deg 60% 50% / 0.3);
+  --callout-warn-bg: hsl(40deg 80% 50% / 0.06);
+  --callout-warn-border: hsl(40deg 80% 50% / 0.3);
+  --callout-tip-bg: hsl(160deg 60% 50% / 0.06);
+  --callout-tip-border: hsl(160deg 60% 50% / 0.3);
+}

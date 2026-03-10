@@ -1,0 +1,321 @@
+// ============================================
+// Theme Toggle
+// ============================================
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2);
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// ============================================
+// Blog Post Card
+// ============================================
+
+.post-card {
+  display: block;
+  padding: var(--sp-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    color: inherit;
+  }
+
+  &__date {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    margin-bottom: var(--sp-2);
+  }
+
+  &__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--sp-2);
+    line-height: var(--leading-tight);
+  }
+
+  &__excerpt {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--sp-4);
+  }
+
+  & + & {
+    margin-top: var(--sp-4);
+  }
+}
+
+// ============================================
+// Tags
+// ============================================
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+}
+
+// ============================================
+// Post Header
+// ============================================
+
+.post-header {
+  margin-bottom: var(--sp-7);
+
+  &__title {
+    margin-bottom: var(--sp-4);
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    flex-wrap: wrap;
+    color: var(--text-tertiary);
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+  }
+
+  &__reading-time {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-1);
+  }
+
+  .tags {
+    margin-top: var(--sp-4);
+  }
+}
+
+// ============================================
+// Post Content (Prose)
+// ============================================
+
+.prose {
+  h2 {
+    margin-top: var(--sp-8);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  h3 {
+    margin-top: var(--sp-6);
+    margin-bottom: var(--sp-3);
+  }
+
+  p {
+    margin-bottom: var(--sp-4);
+  }
+
+  ul, ol {
+    margin-bottom: var(--sp-4);
+    padding-left: var(--sp-5);
+
+    li {
+      margin-bottom: var(--sp-2);
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: var(--sp-4);
+    margin: var(--sp-5) 0;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    margin: var(--sp-5) 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: var(--sp-7) 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--sp-5) 0;
+    font-size: var(--text-sm);
+
+    th, td {
+      padding: var(--sp-3) var(--sp-4);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background: var(--bg-surface);
+      font-weight: 600;
+    }
+  }
+}
+
+// ============================================
+// Callout Boxes
+// ============================================
+
+.callout {
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  margin: var(--sp-5) 0;
+  font-size: var(--text-sm);
+
+  &--info {
+    background: var(--callout-info-bg);
+    border-color: var(--callout-info-border);
+  }
+
+  &--warn {
+    background: var(--callout-warn-bg);
+    border-color: var(--callout-warn-border);
+  }
+
+  &--tip {
+    background: var(--callout-tip-bg);
+    border-color: var(--callout-tip-border);
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: var(--sp-2);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ============================================
+// Page Header (for listing pages)
+// ============================================
+
+.page-header {
+  margin-bottom: var(--sp-7);
+  font-family: var(--font-heading);
+
+  &__title {
+    margin-bottom: var(--sp-2);
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+  }
+}
+
+// ============================================
+// Tag Cloud
+// ============================================
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+
+  .tag {
+    font-size: var(--text-sm);
+    padding: var(--sp-2) var(--sp-4);
+  }
+}
+
+// ============================================
+// Homepage Hero
+// ============================================
+
+.hero {
+  padding: var(--sp-8) 0 var(--sp-7);
+  font-family: var(--font-heading);
+
+  &__greeting {
+    font-size: var(--text-lg);
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+  }
+
+  &__title {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    margin-bottom: var(--sp-4);
+    letter-spacing: -0.03em;
+  }
+
+  &__description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: var(--leading-normal);
+  }
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-light);
+  }
+}

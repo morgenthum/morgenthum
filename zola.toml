@@ -1,0 +1,20 @@
+base_url = "https://morgenthum.dev"
+title = "morgenthum.dev"
+description = "Developer blog about game development with Rust & Bevy, and other projects."
+author = "Mario Morgenthum"
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+taxonomies = [
+    { name = "tags", feed = true },
+]
+
+[markdown]
+  [markdown.highlighting]
+  style = "class"
+  theme = "catppuccin-mocha"
+
+[extra]
+github = "https://github.com/morgenthum"

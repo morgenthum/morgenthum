@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <section class="hero">
+    <p class="hero__greeting">Hey, I'm Mario</p>
+    <h1 class="hero__title">morgenthum.dev</h1>
+    <p class="hero__description">
+      I write about game development with Rust & Bevy, my projects, and everything I learn along the way.
+    </p>
+  </section>
+
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% if blog.pages | length > 0 %}
+  <section>
+    <h2 class="section-title">Latest Posts</h2>
+    {% for page in blog.pages | slice(end=5) %}
+    <a href="{{ page.permalink }}" class="post-card">
+      <time class="post-card__date" datetime="{{ page.date }}">
+        {{ page.date | date(format="%d.%m.%Y") }}
+      </time>
+      <h3 class="post-card__title">{{ page.title }}</h3>
+      {% if page.description %}
+      <p class="post-card__excerpt">{{ page.description }}</p>
+      {% endif %}
+      {% if page.taxonomies.tags is defined %}
+      <div class="tags">
+        {% for tag in page.taxonomies.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </section>
+  {% endif %}
+</div>
+{% endblock %}
