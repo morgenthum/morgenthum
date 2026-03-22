@@ -1,9 +1,15 @@
 +++
 title = "Projects"
-description = "Open-source tools and libraries I'm building."
+description = "Games, tools, and libraries I'm building."
 template = "projects.html"
 
 [extra]
+
+[[extra.projects]]
+name = "Wild Spikes"
+description = "A 3D adventure and stealth game where you play as Iggy, a clever hedgehog navigating dangerous environments. Sneak past enemies, explore hidden paths, and use your spikes wisely. Built with the Bevy engine in Rust."
+language = "Rust"
+tags = ["bevy", "gamedev", "3d", "adventure", "stealth"]
 
 [[extra.projects]]
 name = "map_scatter"
