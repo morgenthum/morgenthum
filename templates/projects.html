@@ -10,7 +10,7 @@
   </div>
 
   <div class="project-grid">
-    {% for project in section.extra.projects %}
+    {% for project in section.extra.projects | sort(attribute="created_year") | reverse %}
     <div class="project-card">
       <div class="project-card__header">
         <div class="project-card__identity">
