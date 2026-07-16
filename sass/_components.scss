@@ -345,10 +345,14 @@
 
   &__header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: var(--sp-3);
     margin-bottom: var(--sp-3);
+  }
+
+  &__identity {
+    min-width: 0;
   }
 
   &__name {
@@ -363,6 +367,18 @@
       &:hover {
         color: var(--accent);
       }
+    }
+  }
+
+  &__created {
+    margin-top: var(--sp-1);
+    color: var(--text-tertiary);
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    line-height: var(--leading-tight);
+
+    time {
+      font-family: var(--font-mono);
     }
   }
 
