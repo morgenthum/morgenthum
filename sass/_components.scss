@@ -180,6 +180,14 @@
     margin: var(--sp-5) 0;
   }
 
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin: var(--sp-5) 0;
+  }
+
   hr {
     border: none;
     border-top: 1px solid var(--border-light);
