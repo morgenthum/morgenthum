@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{# A plain page without date or tags (app pages, legal texts); works for sections and pages. #}
+
+{% block title %}{% if page is defined %}{% set item = page %}{% else %}{% set item = section %}{% endif %}{{ item.title }} - {{ config.title }}{% endblock %}
+{% block description %}{% if page is defined %}{% set item = page %}{% else %}{% set item = section %}{% endif %}{{ item.description | default(value=config.description) }}{% endblock %}
+{% block og_title %}{% if page is defined %}{% set item = page %}{% else %}{% set item = section %}{% endif %}{{ item.title }}{% endblock %}
+{% block og_description %}{% if page is defined %}{% set item = page %}{% else %}{% set item = section %}{% endif %}{{ item.description | default(value=config.description) }}{% endblock %}
+
+{% block content %}
+{% if page is defined %}{% set item = page %}{% else %}{% set item = section %}{% endif %}
+<div class="container">
+  <article>
+    <header class="post-header">
+      <h1 class="post-header__title">{{ item.title }}</h1>
+    </header>
+
+    <div class="prose">
+      {{ item.content | safe }}
+    </div>
+  </article>
+</div>
+{% endblock %}

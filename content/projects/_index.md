@@ -6,6 +6,14 @@ template = "projects.html"
 [extra]
 
 [[extra.projects]]
+name = "Wusel"
+created_year = 2026
+description = "Hand-drawn desktop pets for the Mac. They walk along the Dock, climb windows, eat, sleep under blankets and have a mind of their own, synced across your Macs with iCloud."
+url = "/wusel/"
+language = "Swift"
+tags = ["macos", "appkit", "desktop-pets"]
+
+[[extra.projects]]
 name = "Wild Spikes"
 created_year = 2024
 description = "A 3D adventure and stealth game where you play as Iggy, a clever hedgehog navigating dangerous environments. Sneak past enemies, explore hidden paths, and use your spikes wisely. Built with the Bevy engine in Rust."
