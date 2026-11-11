@@ -9,7 +9,7 @@ template = "projects.html"
 name = "Wusel"
 created_year = 2026
 description = "Hand-drawn desktop pets for the Mac. They walk along the Dock, climb windows, eat, sleep under blankets and have a mind of their own, synced across your Macs with iCloud."
-url = "/wusel/"
+page = "/wusel/"
 language = "Swift"
 tags = ["macos", "appkit", "desktop-pets"]
 

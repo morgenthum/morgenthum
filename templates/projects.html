@@ -15,7 +15,9 @@
       <div class="project-card__header">
         <div class="project-card__identity">
           <h2 class="project-card__name">
-            {% if project.url %}
+            {% if project.page %}
+            <a href="{{ project.page }}">{{ project.name }}</a>
+            {% elif project.url %}
             <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>
             {% else %}
             {{ project.name }}
